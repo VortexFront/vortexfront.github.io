@@ -1,0 +1,351 @@
+{
+  "author": "Максим Асатуров",
+  "projects": [
+    {
+      "slug": "staff-suite",
+      "name": "Staff Suite",
+      "number": "01",
+      "label": "Люди и процессы",
+      "stack": "React · Node.js · SQLite",
+      "lead": "Управление сотрудниками, ролями и рабочими процессами.",
+      "task": "Собрать в одном приложении сотрудников и отделы, смены, отсутствия, архив, QR и аудит действий.",
+      "decision": "Проверка прав на сервере, сохранение DEMO в SQLite и отдельный ограниченный предпросмотр. Смена пароля отзывает остальные сессии; сброс отзывает сессии владельца.",
+      "flow": [
+        "Изменить карточку сотрудника",
+        "Убрать в архив и восстановить",
+        "Обновить страницу и проверить состояние"
+      ],
+      "architecture": [
+        "React UI",
+        "Node.js API · роли",
+        "SQLite · аудит"
+      ],
+      "repo": "nextstaff",
+      "limitations": "Синтетические сотрудники и локальная база. Общедоступная административная учётная запись не используется.",
+      "images": [
+        "preview-1440.png",
+        "employees-1440.png",
+        "archive-390.png",
+        "transfer-768.png"
+      ],
+      "gallery": [
+        "assets/staff-suite-1.png",
+        "assets/staff-suite-2.png",
+        "assets/staff-suite-3.png",
+        "assets/staff-suite-4.png"
+      ],
+      "result": "Карточки сотрудников, архив и восстановление проверены в локальном сценарии. Изменения сохраняются после перезагрузки, права проверяет сервер.",
+      "contribution": "Отвечал за связку интерфейса, API и модели ролей, логику архива и аудит действий. Проверял сохранение состояния и отказы доступа.",
+      "badges": [
+        "Роли на сервере",
+        "Архив и восстановление",
+        "Сохранение состояния"
+      ]
+    },
+    {
+      "slug": "campaign-control",
+      "name": "Campaign Control",
+      "number": "02",
+      "label": "Контент и публикации",
+      "stack": "Next.js · TypeScript · SQLite",
+      "lead": "Кампании с документами, ревизиями и историей решений.",
+      "task": "Провести документ от черновика до публикации, сохранив предыдущие версии и возможность поиска.",
+      "decision": "Полнотекстовый поиск по вложениям, контроль конфликтов версий и атомарное получение задач планировщиком.",
+      "flow": [
+        "Создать кампанию и вложить документ",
+        "Сохранить ревизию и опубликовать",
+        "Проверить историю и найти документ"
+      ],
+      "architecture": [
+        "Next.js UI / API",
+        "Ревизии · очередь",
+        "SQLite · FTS / файлы"
+      ],
+      "repo": "target-control-center",
+      "limitations": "Внешний генератор отчётов не выдаётся за выполненную интеграцию. Для него показывается честный статус SKIPPED.",
+      "images": [
+        "dashboard.png",
+        "published-history.png",
+        "conflict.png",
+        "scheduler.png",
+        "mobile.png"
+      ],
+      "gallery": [
+        "assets/campaign-control-1.png",
+        "assets/campaign-control-2.png",
+        "assets/campaign-control-3.png",
+        "assets/campaign-control-4.png",
+        "assets/campaign-control-5.png"
+      ],
+      "result": "Документ проходит путь от вложения до публикации с историей и поиском. Устаревшая версия вызывает конфликт вместо молчаливой перезаписи.",
+      "contribution": "Отвечал за архитектуру редактора с файлами и SQLite, поиск и очередь задач. Проверял конфликты, ошибки записи и последовательность публикаций.",
+      "badges": [
+        "Черновик → публикация",
+        "История версий",
+        "Контроль конфликтов"
+      ]
+    },
+    {
+      "slug": "loyalty-platform",
+      "name": "Loyalty Platform",
+      "number": "03",
+      "label": "Транзакции и надёжность",
+      "stack": "TypeScript · Fastify · PostgreSQL",
+      "lead": "Клиенты, карты, скидки и купоны с защитой от повторной операции.",
+      "task": "Сохранить корректность операции при потере ответа, повторном запросе и одновременных действиях сотрудников.",
+      "decision": "Идемпотентные операции в PostgreSQL, четыре раздельные роли и зашифрованная очередь доставки. Короткие браузерные сессии проверяют отзыв доступа в базе.",
+      "flow": [
+        "Создать клиента и запросить карту",
+        "Одобрить выдачу в другой роли",
+        "Провести операцию и повторить без дубля"
+      ],
+      "architecture": [
+        "Staff UI · сессия",
+        "Fastify · RBAC",
+        "PostgreSQL · outbox"
+      ],
+      "repo": "friends-loyalty",
+      "limitations": "Настоящие OTP, платежи и внешние отправки отключены. OTP в DEMO принимает явно синтетический локальный почтовый ящик.",
+      "images": [
+        "dashboard.png",
+        "customers.png",
+        "card-request.png",
+        "coupons.png",
+        "redemption.png"
+      ],
+      "gallery": [
+        "assets/loyalty-platform-1.png",
+        "assets/loyalty-platform-2.png",
+        "assets/loyalty-platform-3.png",
+        "assets/loyalty-platform-4.png",
+        "assets/loyalty-platform-5.png"
+      ],
+      "result": "В локальном PostgreSQL-контуре выдача карты разделена между ролями. Проверенные повторы после потери ответа возвращают сохранённый результат без дубля операции.",
+      "contribution": "Отвечал за роли, согласование выдачи карт и транзакционные сценарии. Проверял идемпотентность запросов, очередь и отзыв доступа к сессиям.",
+      "badges": [
+        "Роли и согласование",
+        "Повтор без дублей",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "slug": "events-platform",
+      "name": "Events Platform",
+      "number": "04",
+      "label": "Бронирование и события",
+      "stack": "React · Node.js · SQLite",
+      "lead": "Афиша с регистрацией, статусами и импортом участников.",
+      "task": "Связать выбор события, регистрацию, отмену и обмен данными, не перепутав неоплаченную заявку с оплаченной.",
+      "decision": "Явная классификация платёжного статуса, проверка CSV и отделение демонстрационного подтверждения от настоящего платежа.",
+      "flow": [
+        "Выбрать синтетическое событие",
+        "Зарегистрироваться и проверить статус",
+        "Отменить или выгрузить участников"
+      ],
+      "architecture": [
+        "React афиша",
+        "Node.js API",
+        "SQLite · CSV"
+      ],
+      "repo": "next-afisha",
+      "limitations": "В DEMO деньги не списываются. Реальный эквайринг, CRM и аппаратный QR-сканер требуют отдельного тестового контура.",
+      "images": [
+        "event-desktop.png",
+        "paid-ticket.png",
+        "coupons.png",
+        "event-admin.png",
+        "event-mobile.png"
+      ],
+      "gallery": [
+        "assets/events-platform-1.png",
+        "assets/events-platform-2.png",
+        "assets/events-platform-3.png",
+        "assets/events-platform-4.png",
+        "assets/events-platform-5.png"
+      ],
+      "result": "Регистрация сохраняется, повтор запроса не создаёт дубль, отмена меняет статус. На синтетических данных импорт различает неоплаченные и подтверждённые заявки.",
+      "contribution": "Отвечал за клиентский маршрут, API и сохранение регистрации. Разделил статусы оплаты и демо-подтверждение, проверил CSV, отмену и повторные запросы.",
+      "badges": [
+        "Регистрация и отмена",
+        "CSV-обмен",
+        "Явные статусы"
+      ]
+    },
+    {
+      "slug": "crm-sheets-sync",
+      "name": "CRM–Sheets Sync",
+      "number": "05",
+      "label": "Интеграции и восстановление",
+      "stack": "Python · SQLite · CRM / Sheets adapters",
+      "lead": "Синхронизация данных с проверяемым результатом и восстановлением после сбоя.",
+      "task": "Перенести данные синтетической CRM в таблицу, сверить результат и безопасно повторить незавершённый запуск.",
+      "decision": "Прежние правила преобразования полей используются в локальном рабочем интерфейсе. Долговечный журнал SQLite хранит ход синхронизации и сведения для повторной сверки.",
+      "flow": [
+        "Запустить синхронизацию и сверку",
+        "Повторить без дублирования строк",
+        "Восстановить выполнение после сбоя"
+      ],
+      "architecture": [
+        "Локальный workbench",
+        "Python · mapping / retry",
+        "SQLite журнал · адаптер"
+      ],
+      "repo": "bitrix-sheets-automation",
+      "limitations": "Локальная таблица не воспроизводит весь формульный движок Google Sheets. Реальные CRM и Google API в DEMO не вызываются.",
+      "images": [],
+      "gallery": [
+        "assets/crm-sheets-sync-1.png",
+        "assets/crm-sheets-sync-2.png",
+        "assets/crm-sheets-sync-3.png"
+      ],
+      "result": "Повторная синхронизация и сверка в локальном контуре не добавляют дубли. Прерванный запуск восстанавливается по журналу SQLite.",
+      "contribution": "Отвечал за правила преобразования полей, локальный адаптер и журнал запусков. Проверял повторную сверку, ошибки адаптера и восстановление после перезапуска.",
+      "badges": [
+        "Сверка данных",
+        "Повтор и восстановление",
+        "Журнал SQLite"
+      ]
+    }
+  ],
+  "scope": "Static case showcase; application backends are not hosted by this page",
+  "data": "synthetic only",
+  "library": [
+    {
+      "slug": "personal-kanban",
+      "name": "Personal Kanban",
+      "category": "Задачи",
+      "description": "Локальная доска задач и сохранение состояния.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "HTML · CSS · JavaScript · localStorage"
+    },
+    {
+      "slug": "windows-cleanup",
+      "name": "Windows Cleanup",
+      "category": "Инструменты",
+      "description": "Утилита очистки с безопасным демонстрационным запуском.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Windows Batch · PowerShell"
+    },
+    {
+      "slug": "booking-platform-api",
+      "name": "Booking Platform API",
+      "category": "API",
+      "description": "Бронирование, каталог и табличный адаптер.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Python · FastAPI · SQLAlchemy · MySQL / SQLite"
+    },
+    {
+      "slug": "venue-booking-api",
+      "name": "Venue Booking API",
+      "category": "API",
+      "description": "Площадки, прайс-листы, заказы и кеширование.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Python · FastAPI · SQLite · Google Sheets API"
+    },
+    {
+      "slug": "messaging-crm-connector",
+      "name": "Messaging–CRM Connector",
+      "category": "Интеграции",
+      "description": "Сессии, роли и связка сообщений с CRM.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "PHP · JavaScript · JSON · REST API"
+    },
+    {
+      "slug": "crm-task-extension",
+      "name": "CRM Task Extension",
+      "category": "Инструменты",
+      "description": "Расширение браузера для работы с задачами.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "JavaScript · Chrome Extension MV3 · HTML/CSS"
+    },
+    {
+      "slug": "delivery-platform",
+      "name": "Delivery Platform",
+      "category": "Приложения",
+      "description": "Заказы и процессы доставки.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "JavaScript · Node.js · Express · MySQL"
+    },
+    {
+      "slug": "messaging-hub",
+      "name": "Messaging Hub",
+      "category": "API",
+      "description": "Сервис работы с сообщениями.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Python · FastAPI · MySQL / SQLite"
+    },
+    {
+      "slug": "event-booking-console",
+      "name": "Event Booking Console",
+      "category": "Приложения",
+      "description": "Интерфейс бронирования и локальный API.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "TypeScript · React · Vite · Express · Google Sheets API"
+    },
+    {
+      "slug": "procurement-platform",
+      "name": "Procurement Platform",
+      "category": "Приложения",
+      "description": "Закупки, согласования и уведомления.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "TypeScript · React · Express · MySQL"
+    },
+    {
+      "slug": "finance-platform",
+      "name": "Finance Platform",
+      "category": "Приложения",
+      "description": "Бюджеты, согласования и денежные движения.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "TypeScript · React · Express · MySQL"
+    },
+    {
+      "slug": "followup-engine",
+      "name": "Follow-up Engine",
+      "category": "Автоматизация",
+      "description": "Сценарии повторного контакта и оркестрация.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "JavaScript · Node.js · Express · MySQL"
+    },
+    {
+      "slug": "assistant-blueprints",
+      "name": "Assistant Blueprints",
+      "category": "ИИ / боты",
+      "description": "Конфигурации ассистентов, маршрутизация и локальные инструменты.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Python · SQLite · JSON"
+    },
+    {
+      "slug": "task-assistant",
+      "name": "Task Assistant",
+      "category": "ИИ / боты",
+      "description": "Telegram-ассистент с задачами и SQLite.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Python · aiogram · SQLite · OpenAI API"
+    },
+    {
+      "slug": "tournament-manager",
+      "name": "Tournament Manager",
+      "category": "Приложения",
+      "description": "Турнирные сетки и управление участниками.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Python · Flask · Jinja2 · python-telegram-bot"
+    },
+    {
+      "slug": "device-control-bot",
+      "name": "Device Control Bot",
+      "category": "ИИ / боты",
+      "description": "Управление устройствами через бота с разграничением доступа.",
+      "note": "Локальный запуск перепроверен.",
+      "stack": "Python · pyTelegramBotAPI · Paramiko / SSH · Wake-on-LAN"
+    },
+    {
+      "slug": "conversation-insights",
+      "name": "Conversation Insights",
+      "category": "ИИ / боты",
+      "description": "Анализ диалогов и тематическая обработка.",
+      "note": "Полный набор старых тестов требует исправления.",
+      "stack": "Python · stdlib HTTP · MySQL / SQLite · OpenAI API"
+    }
+  ],
+  "contribution_note": "Вклад описывает мою ответственность за технические решения и проверку результата; реализация, отладка и тесты выполнялись с использованием ИИ-инструментов."
+}

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Максим Асатуров — Fullstack-разработчик. Веб-приложения, AI Integration и Business Automation: пять инженерных кейсов, архитектура, проверенные сценарии и ограничения.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f7f8f4">
+  <title>Максим Асатуров — Fullstack · AI Integration · Automation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top">
+      <span class="wordmark-icon" aria-hidden="true">МА</span>
+      <span class="wordmark-name">Максим Асатуров<small>FULLSTACK DEVELOPER</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <a href="#selected">Кейсы</a><a href="#library">Библиотека</a><a href="#approach">Подход</a><a class="nav-contact" href="#contact">Контакты <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-identity">Максим Асатуров · Fullstack-разработчик</p>
+          <h1 id="hero-title">От бизнес-задачи<br>до <em>работающей<br>системы.</em></h1>
+          <p class="hero-description">Проектирую и разрабатываю веб-приложения, API и интеграции. Связываю интерфейс, данные и бизнес-логику — и проверяю, как решение работает в пользовательских сценариях.</p>
+          <div class="specializations" aria-label="Специализация"><span>Fullstack</span><span>AI Integration</span><span>Business Automation</span></div>
+          <div class="hero-actions"><a class="primary" href="#selected">Смотреть 5 кейсов <span aria-hidden="true">↓</span></a><a class="secondary" href="assets/resume-maxim-asaturov.docx" download>Резюме · DOCX <span aria-hidden="true">↙</span></a></div>
+          <p class="hero-stack">React / TypeScript / Python / FastAPI / SQL</p>
+        </div>
+        <figure class="hero-visual">
+          <div class="hero-window">
+            <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Staff Suite / рабочий интерфейс</span></div>
+            <img src="assets/staff-suite-1.png" alt="Staff Suite: интерфейс управления сотрудниками на синтетических данных" width="1440" height="950" fetchpriority="high" decoding="async">
+          </div>
+          <figcaption><strong>Интерфейс → API → данные</strong><span>Реальный экран · синтетические данные</span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-proof"><span><strong>5</strong> подробных кейсов</span><span><strong>17</strong> работ в библиотеке</span><span class="proof-note">Архитектура. Сценарии. Границы решения.</span></div>
+    </section>
+
+    <section class="selected" id="selected" aria-labelledby="selected-title">
+      <div class="section-heading"><p class="eyebrow">01 / Избранные работы</p><h2 id="selected-title">Не только экран.<br>Логика за ним.</h2><p>Пять систем: задача, решение и результат проверки. Моя ответственность — архитектура, прикладная логика и доведение до рабочего состояния. В разработке использую ИИ-инструменты.</p></div>
+      
+      <article class="case" id="staff-suite" aria-labelledby="staff-suite-title">
+        <div class="case-main">
+          <div class="case-copy">
+            <p class="eyebrow">01 / Люди и процессы</p>
+            <h3 id="staff-suite-title">Staff Suite</h3>
+            <p class="lead">Управление сотрудниками, ролями и рабочими процессами.</p>
+            <div class="case-tags" aria-label="Инженерные акценты"><span class="badge">Роли на сервере</span><span class="badge">Архив и восстановление</span><span class="badge">Сохранение состояния</span></div>
+            <p class="stack">React · Node.js · SQLite</p>
+            <a class="case-link" href="#staff-suite-details">Разобрать кейс <span aria-hidden="true">↓</span></a>
+          </div>
+          <button type="button" class="cover" data-gallery="staff-suite" data-caption="Staff Suite · синтетические данные">
+            <span class="screen-shell">
+              <span class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Staff Suite</span></span>
+              <img src="assets/staff-suite-1.png" alt="Реальный экран локального приложения Staff Suite с синтетическими данными" width="1440" height="950" loading="lazy" decoding="async">
+            </span>
+            <span class="cover-caption"><span>Локальное приложение · демо-данные</span><span aria-hidden="true">Увеличить ↗</span></span>
+          </button>
+        </div>
+        <dl class="case-overview">
+          <div><dt>Задача</dt><dd>Собрать в одном приложении сотрудников и отделы, смены, отсутствия, архив, QR и аудит действий.</dd></div>
+          <div><dt>Решение</dt><dd>Проверка прав на сервере, сохранение DEMO в SQLite и отдельный ограниченный предпросмотр. Смена пароля отзывает остальные сессии; сброс отзывает сессии владельца.</dd></div>
+          <div><dt>Результат проверки</dt><dd>Карточки сотрудников, архив и восстановление проверены в локальном сценарии. Изменения сохраняются после перезагрузки, права проверяет сервер.</dd></div>
+          <div class="contribution"><dt>Мой вклад</dt><dd>Отвечал за связку интерфейса, API и модели ролей, логику архива и аудит действий. Проверял сохранение состояния и отказы доступа.</dd></div>
+        </dl>
+        <details id="staff-suite-details">
+          <summary>Архитектура, сценарий и ограничения</summary>
+          <div class="case-details">
+            <div><h4>Сценарий за 30 секунд</h4><ol><li>Изменить карточку сотрудника</li><li>Убрать в архив и восстановить</li><li>Обновить страницу и проверить состояние</li></ol></div>
+            <div><h4>Границы демонстрации</h4><p class="limit">Синтетические сотрудники и локальная база. Общедоступная административная учётная запись не используется.</p></div>
+            <div class="architecture" aria-label="Архитектура: React UI → Node.js API · роли → SQLite · аудит"><span>React UI</span><span>Node.js API · роли</span><span>SQLite · аудит</span></div>
+            <div class="gallery" aria-label="Снимки Staff Suite"><button type="button" class="thumb" data-image="assets/staff-suite-1.png" data-caption="Staff Suite · снимок 1" aria-label="Увеличить снимок 1 проекта Staff Suite"><img src="assets/staff-suite-1.png" alt="Синтетический сценарий 1 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/staff-suite-2.png" data-caption="Staff Suite · снимок 2" aria-label="Увеличить снимок 2 проекта Staff Suite"><img src="assets/staff-suite-2.png" alt="Синтетический сценарий 2 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/staff-suite-3.png" data-caption="Staff Suite · снимок 3" aria-label="Увеличить снимок 3 проекта Staff Suite"><img src="assets/staff-suite-3.png" alt="Синтетический сценарий 3 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/staff-suite-4.png" data-caption="Staff Suite · снимок 4" aria-label="Увеличить снимок 4 проекта Staff Suite"><img src="assets/staff-suite-4.png" alt="Синтетический сценарий 4 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></button></div>
+            <p class="repo-note">Исходный код проекта закрыт. На этой странице доступны описание решения и снимки локального приложения.</p>
+          </div>
+        </details>
+      </article>
+      <article class="case" id="campaign-control" aria-labelledby="campaign-control-title">
+        <div class="case-main">
+          <div class="case-copy">
+            <p class="eyebrow">02 / Контент и публикации</p>
+            <h3 id="campaign-control-title">Campaign Control</h3>
+            <p class="lead">Кампании с документами, ревизиями и историей решений.</p>
+            <div class="case-tags" aria-label="Инженерные акценты"><span class="badge">Черновик → публикация</span><span class="badge">История версий</span><span class="badge">Контроль конфликтов</span></div>
+            <p class="stack">Next.js · TypeScript · SQLite</p>
+            <a class="case-link" href="#campaign-control-details">Разобрать кейс <span aria-hidden="true">↓</span></a>
+          </div>
+          <button type="button" class="cover" data-gallery="campaign-control" data-caption="Campaign Control · синтетические данные">
+            <span class="screen-shell">
+              <span class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Campaign Control</span></span>
+              <img src="assets/campaign-control-1.png" alt="Реальный экран локального приложения Campaign Control с синтетическими данными" width="1440" height="950" loading="lazy" decoding="async">
+            </span>
+            <span class="cover-caption"><span>Локальное приложение · демо-данные</span><span aria-hidden="true">Увеличить ↗</span></span>
+          </button>
+        </div>
+        <dl class="case-overview">
+          <div><dt>Задача</dt><dd>Провести документ от черновика до публикации, сохранив предыдущие версии и возможность поиска.</dd></div>
+          <div><dt>Решение</dt><dd>Полнотекстовый поиск по вложениям, контроль конфликтов версий и атомарное получение задач планировщиком.</dd></div>
+          <div><dt>Результат проверки</dt><dd>Документ проходит путь от вложения до публикации с историей и поиском. Устаревшая версия вызывает конфликт вместо молчаливой перезаписи.</dd></div>
+          <div class="contribution"><dt>Мой вклад</dt><dd>Отвечал за архитектуру редактора с файлами и SQLite, поиск и очередь задач. Проверял конфликты, ошибки записи и последовательность публикаций.</dd></div>
+        </dl>
+        <details id="campaign-control-details">
+          <summary>Архитектура, сценарий и ограничения</summary>
+          <div class="case-details">
+            <div><h4>Сценарий за 30 секунд</h4><ol><li>Создать кампанию и вложить документ</li><li>Сохранить ревизию и опубликовать</li><li>Проверить историю и найти документ</li></ol></div>
+            <div><h4>Границы демонстрации</h4><p class="limit">Внешний генератор отчётов не выдаётся за выполненную интеграцию. Для него показывается честный статус SKIPPED.</p></div>
+            <div class="architecture" aria-label="Архитектура: Next.js UI / API → Ревизии · очередь → SQLite · FTS / файлы"><span>Next.js UI / API</span><span>Ревизии · очередь</span><span>SQLite · FTS / файлы</span></div>
+            <div class="gallery" aria-label="Снимки Campaign Control"><button type="button" class="thumb" data-image="assets/campaign-control-1.png" data-caption="Campaign Control · снимок 1" aria-label="Увеличить снимок 1 проекта Campaign Control"><img src="assets/campaign-control-1.png" alt="Синтетический сценарий 1 — Campaign Control" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/campaign-control-2.png" data-caption="Campaign Control · снимок 2" aria-label="Увеличить снимок 2 проекта Campaign Control"><img src="assets/campaign-control-2.png" alt="Синтетический сценарий 2 — Campaign Control" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/campaign-control-3.png" data-caption="Campaign Control · снимок 3" aria-label="Увеличить снимок 3 проекта Campaign Control"><img src="assets/campaign-control-3.png" alt="Синтетический сценарий 3 — Campaign Control" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/campaign-control-4.png" data-caption="Campaign Control · снимок 4" aria-label="Увеличить снимок 4 проекта Campaign Control"><img src="assets/campaign-control-4.png" alt="Синтетический сценарий 4 — Campaign Control" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/campaign-control-5.png" data-caption="Campaign Control · снимок 5" aria-label="Увеличить снимок 5 проекта Campaign Control"><img src="assets/campaign-control-5.png" alt="Синтетический сценарий 5 — Campaign Control" width="320" height="210" loading="lazy" decoding="async"></button></div>
+            <p class="repo-note">Исходный код проекта закрыт. На этой странице доступны описание решения и снимки локального приложения.</p>
+          </div>
+        </details>
+      </article>
+      <article class="case" id="loyalty-platform" aria-labelledby="loyalty-platform-title">
+        <div class="case-main">
+          <div class="case-copy">
+            <p class="eyebrow">03 / Транзакции и надёжность</p>
+            <h3 id="loyalty-platform-title">Loyalty Platform</h3>
+            <p class="lead">Клиенты, карты, скидки и купоны с защитой от повторной операции.</p>
+            <div class="case-tags" aria-label="Инженерные акценты"><span class="badge">Роли и согласование</span><span class="badge">Повтор без дублей</span><span class="badge">PostgreSQL</span></div>
+            <p class="stack">TypeScript · Fastify · PostgreSQL</p>
+            <a class="case-link" href="#loyalty-platform-details">Разобрать кейс <span aria-hidden="true">↓</span></a>
+          </div>
+          <button type="button" class="cover" data-gallery="loyalty-platform" data-caption="Loyalty Platform · синтетические данные">
+            <span class="screen-shell">
+              <span class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Loyalty Platform</span></span>
+              <img src="assets/loyalty-platform-1.png" alt="Реальный экран локального приложения Loyalty Platform с синтетическими данными" width="1440" height="950" loading="lazy" decoding="async">
+            </span>
+            <span class="cover-caption"><span>Локальное приложение · демо-данные</span><span aria-hidden="true">Увеличить ↗</span></span>
+          </button>
+        </div>
+        <dl class="case-overview">
+          <div><dt>Задача</dt><dd>Сохранить корректность операции при потере ответа, повторном запросе и одновременных действиях сотрудников.</dd></div>
+          <div><dt>Решение</dt><dd>Идемпотентные операции в PostgreSQL, четыре раздельные роли и зашифрованная очередь доставки. Короткие браузерные сессии проверяют отзыв доступа в базе.</dd></div>
+          <div><dt>Результат проверки</dt><dd>В локальном PostgreSQL-контуре выдача карты разделена между ролями. Проверенные повторы после потери ответа возвращают сохранённый результат без дубля операции.</dd></div>
+          <div class="contribution"><dt>Мой вклад</dt><dd>Отвечал за роли, согласование выдачи карт и транзакционные сценарии. Проверял идемпотентность запросов, очередь и отзыв доступа к сессиям.</dd></div>
+        </dl>
+        <details id="loyalty-platform-details">
+          <summary>Архитектура, сценарий и ограничения</summary>
+          <div class="case-details">
+            <div><h4>Сценарий за 30 секунд</h4><ol><li>Создать клиента и запросить карту</li><li>Одобрить выдачу в другой роли</li><li>Провести операцию и повторить без дубля</li></ol></div>
+            <div><h4>Границы демонстрации</h4><p class="limit">Настоящие OTP, платежи и внешние отправки отключены. OTP в DEMO принимает явно синтетический локальный почтовый ящик.</p></div>
+            <div class="architecture" aria-label="Архитектура: Staff UI · сессия → Fastify · RBAC → PostgreSQL · outbox"><span>Staff UI · сессия</span><span>Fastify · RBAC</span><span>PostgreSQL · outbox</span></div>
+            <div class="gallery" aria-label="Снимки Loyalty Platform"><button type="button" class="thumb" data-image="assets/loyalty-platform-1.png" data-caption="Loyalty Platform · снимок 1" aria-label="Увеличить снимок 1 проекта Loyalty Platform"><img src="assets/loyalty-platform-1.png" alt="Синтетический сценарий 1 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/loyalty-platform-2.png" data-caption="Loyalty Platform · снимок 2" aria-label="Увеличить снимок 2 проекта Loyalty Platform"><img src="assets/loyalty-platform-2.png" alt="Синтетический сценарий 2 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/loyalty-platform-3.png" data-caption="Loyalty Platform · снимок 3" aria-label="Увеличить снимок 3 проекта Loyalty Platform"><img src="assets/loyalty-platform-3.png" alt="Синтетический сценарий 3 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/loyalty-platform-4.png" data-caption="Loyalty Platform · снимок 4" aria-label="Увеличить снимок 4 проекта Loyalty Platform"><img src="assets/loyalty-platform-4.png" alt="Синтетический сценарий 4 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/loyalty-platform-5.png" data-caption="Loyalty Platform · снимок 5" aria-label="Увеличить снимок 5 проекта Loyalty Platform"><img src="assets/loyalty-platform-5.png" alt="Синтетический сценарий 5 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></button></div>
+            <p class="repo-note">Исходный код проекта закрыт. На этой странице доступны описание решения и снимки локального приложения.</p>
+          </div>
+        </details>
+      </article>
+      <article class="case" id="events-platform" aria-labelledby="events-platform-title">
+        <div class="case-main">
+          <div class="case-copy">
+            <p class="eyebrow">04 / Бронирование и события</p>
+            <h3 id="events-platform-title">Events Platform</h3>
+            <p class="lead">Афиша с регистрацией, статусами и импортом участников.</p>
+            <div class="case-tags" aria-label="Инженерные акценты"><span class="badge">Регистрация и отмена</span><span class="badge">CSV-обмен</span><span class="badge">Явные статусы</span></div>
+            <p class="stack">React · Node.js · SQLite</p>
+            <a class="case-link" href="#events-platform-details">Разобрать кейс <span aria-hidden="true">↓</span></a>
+          </div>
+          <button type="button" class="cover" data-gallery="events-platform" data-caption="Events Platform · синтетические данные">
+            <span class="screen-shell">
+              <span class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Events Platform</span></span>
+              <img src="assets/events-platform-1.png" alt="Реальный экран локального приложения Events Platform с синтетическими данными" width="1440" height="950" loading="lazy" decoding="async">
+            </span>
+            <span class="cover-caption"><span>Локальное приложение · демо-данные</span><span aria-hidden="true">Увеличить ↗</span></span>
+          </button>
+        </div>
+        <dl class="case-overview">
+          <div><dt>Задача</dt><dd>Связать выбор события, регистрацию, отмену и обмен данными, не перепутав неоплаченную заявку с оплаченной.</dd></div>
+          <div><dt>Решение</dt><dd>Явная классификация платёжного статуса, проверка CSV и отделение демонстрационного подтверждения от настоящего платежа.</dd></div>
+          <div><dt>Результат проверки</dt><dd>Регистрация сохраняется, повтор запроса не создаёт дубль, отмена меняет статус. На синтетических данных импорт различает неоплаченные и подтверждённые заявки.</dd></div>
+          <div class="contribution"><dt>Мой вклад</dt><dd>Отвечал за клиентский маршрут, API и сохранение регистрации. Разделил статусы оплаты и демо-подтверждение, проверил CSV, отмену и повторные запросы.</dd></div>
+        </dl>
+        <details id="events-platform-details">
+          <summary>Архитектура, сценарий и ограничения</summary>
+          <div class="case-details">
+            <div><h4>Сценарий за 30 секунд</h4><ol><li>Выбрать синтетическое событие</li><li>Зарегистрироваться и проверить статус</li><li>Отменить или выгрузить участников</li></ol></div>
+            <div><h4>Границы демонстрации</h4><p class="limit">В DEMO деньги не списываются. Реальный эквайринг, CRM и аппаратный QR-сканер требуют отдельного тестового контура.</p></div>
+            <div class="architecture" aria-label="Архитектура: React афиша → Node.js API → SQLite · CSV"><span>React афиша</span><span>Node.js API</span><span>SQLite · CSV</span></div>
+            <div class="gallery" aria-label="Снимки Events Platform"><button type="button" class="thumb" data-image="assets/events-platform-1.png" data-caption="Events Platform · снимок 1" aria-label="Увеличить снимок 1 проекта Events Platform"><img src="assets/events-platform-1.png" alt="Синтетический сценарий 1 — Events Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/events-platform-2.png" data-caption="Events Platform · снимок 2" aria-label="Увеличить снимок 2 проекта Events Platform"><img src="assets/events-platform-2.png" alt="Синтетический сценарий 2 — Events Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/events-platform-3.png" data-caption="Events Platform · снимок 3" aria-label="Увеличить снимок 3 проекта Events Platform"><img src="assets/events-platform-3.png" alt="Синтетический сценарий 3 — Events Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/events-platform-4.png" data-caption="Events Platform · снимок 4" aria-label="Увеличить снимок 4 проекта Events Platform"><img src="assets/events-platform-4.png" alt="Синтетический сценарий 4 — Events Platform" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/events-platform-5.png" data-caption="Events Platform · снимок 5" aria-label="Увеличить снимок 5 проекта Events Platform"><img src="assets/events-platform-5.png" alt="Синтетический сценарий 5 — Events Platform" width="320" height="210" loading="lazy" decoding="async"></button></div>
+            <p class="repo-note">Исходный код проекта закрыт. На этой странице доступны описание решения и снимки локального приложения.</p>
+          </div>
+        </details>
+      </article>
+      <article class="case" id="crm-sheets-sync" aria-labelledby="crm-sheets-sync-title">
+        <div class="case-main">
+          <div class="case-copy">
+            <p class="eyebrow">05 / Интеграции и восстановление</p>
+            <h3 id="crm-sheets-sync-title">CRM–Sheets Sync</h3>
+            <p class="lead">Синхронизация данных с проверяемым результатом и восстановлением после сбоя.</p>
+            <div class="case-tags" aria-label="Инженерные акценты"><span class="badge">Сверка данных</span><span class="badge">Повтор и восстановление</span><span class="badge">Журнал SQLite</span></div>
+            <p class="stack">Python · SQLite · CRM / Sheets adapters</p>
+            <a class="case-link" href="#crm-sheets-sync-details">Разобрать кейс <span aria-hidden="true">↓</span></a>
+          </div>
+          <button type="button" class="cover" data-gallery="crm-sheets-sync" data-caption="CRM–Sheets Sync · синтетические данные">
+            <span class="screen-shell">
+              <span class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>CRM–Sheets Sync</span></span>
+              <img src="assets/crm-sheets-sync-1.png" alt="Реальный экран локального приложения CRM–Sheets Sync с синтетическими данными" width="1440" height="950" loading="lazy" decoding="async">
+            </span>
+            <span class="cover-caption"><span>Локальное приложение · демо-данные</span><span aria-hidden="true">Увеличить ↗</span></span>
+          </button>
+        </div>
+        <dl class="case-overview">
+          <div><dt>Задача</dt><dd>Перенести данные синтетической CRM в таблицу, сверить результат и безопасно повторить незавершённый запуск.</dd></div>
+          <div><dt>Решение</dt><dd>Прежние правила преобразования полей используются в локальном рабочем интерфейсе. Долговечный журнал SQLite хранит ход синхронизации и сведения для повторной сверки.</dd></div>
+          <div><dt>Результат проверки</dt><dd>Повторная синхронизация и сверка в локальном контуре не добавляют дубли. Прерванный запуск восстанавливается по журналу SQLite.</dd></div>
+          <div class="contribution"><dt>Мой вклад</dt><dd>Отвечал за правила преобразования полей, локальный адаптер и журнал запусков. Проверял повторную сверку, ошибки адаптера и восстановление после перезапуска.</dd></div>
+        </dl>
+        <details id="crm-sheets-sync-details">
+          <summary>Архитектура, сценарий и ограничения</summary>
+          <div class="case-details">
+            <div><h4>Сценарий за 30 секунд</h4><ol><li>Запустить синхронизацию и сверку</li><li>Повторить без дублирования строк</li><li>Восстановить выполнение после сбоя</li></ol></div>
+            <div><h4>Границы демонстрации</h4><p class="limit">Локальная таблица не воспроизводит весь формульный движок Google Sheets. Реальные CRM и Google API в DEMO не вызываются.</p></div>
+            <div class="architecture" aria-label="Архитектура: Локальный workbench → Python · mapping / retry → SQLite журнал · адаптер"><span>Локальный workbench</span><span>Python · mapping / retry</span><span>SQLite журнал · адаптер</span></div>
+            <div class="gallery" aria-label="Снимки CRM–Sheets Sync"><button type="button" class="thumb" data-image="assets/crm-sheets-sync-1.png" data-caption="CRM–Sheets Sync · снимок 1" aria-label="Увеличить снимок 1 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-1.png" alt="Синтетический сценарий 1 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/crm-sheets-sync-2.png" data-caption="CRM–Sheets Sync · снимок 2" aria-label="Увеличить снимок 2 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-2.png" alt="Синтетический сценарий 2 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></button><button type="button" class="thumb" data-image="assets/crm-sheets-sync-3.png" data-caption="CRM–Sheets Sync · снимок 3" aria-label="Увеличить снимок 3 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-3.png" alt="Синтетический сценарий 3 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></button></div>
+            <p class="repo-note">Исходный код проекта закрыт. На этой странице доступны описание решения и снимки локального приложения.</p>
+          </div>
+        </details>
+      </article>
+    </section>
+
+    <section class="approach" id="approach" aria-labelledby="approach-title">
+      <div class="section-heading"><p class="eyebrow">02 / Подход к работе</p><h2 id="approach-title">Понять задачу.<br>Собрать. Проверить.</h2><p>Рассматриваю продукт как связку пользователей, процессов и данных. Качество решения для меня определяется тем, что происходит после нажатия кнопки.</p></div>
+      <div class="approach-grid">
+        <article class="approach-step"><span aria-hidden="true">01</span><div><h3>Начинаю с бизнес-процесса</h3><p>Выясняю, кто пользуется системой, какие данные меняются и где возможна ошибка. Из этого складываются сценарий, ограничения и критерии готовности.</p></div></article>
+        <article class="approach-step"><span aria-hidden="true">02</span><div><h3>Связываю части системы</h3><p>Продумываю интерфейс, API, хранение данных и права доступа вместе. Учитываю повторные запросы, состояния и границы внешних интеграций.</p></div></article>
+        <article class="approach-step"><span aria-hidden="true">03</span><div><h3>Использую AI как инструмент</h3><p>ИИ помогает с реализацией, разбором вариантов и проверками. За архитектурные решения, логику, отладку и приёмку результата отвечаю я.</p></div></article>
+        <article class="approach-step"><span aria-hidden="true">04</span><div><h3>Проверяю рабочий сценарий</h3><p>Проверяю изменение и сохранение данных, отказы и повторные действия. Фиксирую результаты тестов и ограничения; локальную демонстрацию не выдаю за проверку рабочего сервиса.</p></div></article>
+      </div>
+      <p class="showcase-note"><strong>Как смотреть портфолио.</strong> Здесь — описания решений и снимки локальных приложений на синтетических данных. Серверные приложения запускаются отдельно по README. Страница не подключена к рабочим системам и не предоставляет публичный административный доступ.</p>
+    </section>
+
+    <section class="library" id="library" aria-labelledby="library-title">
+      <div class="section-heading"><p class="eyebrow">03 / Инженерная библиотека</p><h2 id="library-title">Другие задачи.<br>Тот же системный взгляд.</h2><p>Ещё 17 работ: API, автоматизация, боты и инструменты. Локальный запуск проверен отдельно; глубина проверки отличается от пяти основных кейсов.</p></div>
+      <div class="library-controls" hidden>
+        <div class="search-line"><label for="project-search">Найти проект</label><div class="search-field"><input type="search" id="project-search" placeholder="Название, задача или технология" autocomplete="off" aria-controls="project-library"><svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.7"/></svg></div></div>
+        <div class="filters" role="group" aria-label="Фильтр проектов"><button type="button" data-filter="Все" aria-pressed="true">Все<span aria-hidden="true">17</span></button><button type="button" data-filter="Приложения" aria-pressed="false">Приложения<span aria-hidden="true">5</span></button><button type="button" data-filter="API" aria-pressed="false">API<span aria-hidden="true">3</span></button><button type="button" data-filter="Интеграции" aria-pressed="false">Интеграции<span aria-hidden="true">1</span></button><button type="button" data-filter="ИИ / боты" aria-pressed="false">ИИ / боты<span aria-hidden="true">4</span></button><button type="button" data-filter="Инструменты" aria-pressed="false">Инструменты<span aria-hidden="true">2</span></button><button type="button" data-filter="Автоматизация" aria-pressed="false">Автоматизация<span aria-hidden="true">1</span></button><button type="button" data-filter="Задачи" aria-pressed="false">Задачи<span aria-hidden="true">1</span></button></div>
+      </div>
+      <noscript><p class="filter-status">Для поиска и фильтров нужен JavaScript. Все 17 проектов доступны ниже.</p></noscript>
+      <p class="filter-status" role="status" aria-live="polite" aria-atomic="true">17 из 17 проектов · все направления</p>
+      <ul class="library-list" id="project-library"><li class="library-row" data-category="Задачи" data-slug="personal-kanban"><span class="library-index" aria-hidden="true">01</span><div><h3>Personal Kanban</h3><p>Локальная доска задач и сохранение состояния.</p><span class="library-stack">HTML · CSS · JavaScript · localStorage</span><small>Локальный запуск проверен</small></div><span class="category">Задачи</span></li><li class="library-row" data-category="Инструменты" data-slug="windows-cleanup"><span class="library-index" aria-hidden="true">02</span><div><h3>Windows Cleanup</h3><p>Утилита очистки с безопасным демонстрационным запуском.</p><span class="library-stack">Windows Batch · PowerShell</span><small>Локальный запуск проверен</small></div><span class="category">Инструменты</span></li><li class="library-row" data-category="API" data-slug="booking-platform-api"><span class="library-index" aria-hidden="true">03</span><div><h3>Booking Platform API</h3><p>Бронирование, каталог и табличный адаптер.</p><span class="library-stack">Python · FastAPI · SQLAlchemy · MySQL / SQLite</span><small>Локальный запуск проверен</small></div><span class="category">API</span></li><li class="library-row" data-category="API" data-slug="venue-booking-api"><span class="library-index" aria-hidden="true">04</span><div><h3>Venue Booking API</h3><p>Площадки, прайс-листы, заказы и кеширование.</p><span class="library-stack">Python · FastAPI · SQLite · Google Sheets API</span><small>Локальный запуск проверен</small></div><span class="category">API</span></li><li class="library-row" data-category="Интеграции" data-slug="messaging-crm-connector"><span class="library-index" aria-hidden="true">05</span><div><h3>Messaging–CRM Connector</h3><p>Сессии, роли и связка сообщений с CRM.</p><span class="library-stack">PHP · JavaScript · JSON · REST API</span><small>Локальный запуск проверен</small></div><span class="category">Интеграции</span></li><li class="library-row" data-category="Инструменты" data-slug="crm-task-extension"><span class="library-index" aria-hidden="true">06</span><div><h3>CRM Task Extension</h3><p>Расширение браузера для работы с задачами.</p><span class="library-stack">JavaScript · Chrome Extension MV3 · HTML/CSS</span><small>Локальный запуск проверен</small></div><span class="category">Инструменты</span></li><li class="library-row" data-category="Приложения" data-slug="delivery-platform"><span class="library-index" aria-hidden="true">07</span><div><h3>Delivery Platform</h3><p>Заказы и процессы доставки.</p><span class="library-stack">JavaScript · Node.js · Express · MySQL</span><small>Локальный запуск проверен</small></div><span class="category">Приложения</span></li><li class="library-row" data-category="API" data-slug="messaging-hub"><span class="library-index" aria-hidden="true">08</span><div><h3>Messaging Hub</h3><p>Сервис работы с сообщениями.</p><span class="library-stack">Python · FastAPI · MySQL / SQLite</span><small>Локальный запуск проверен</small></div><span class="category">API</span></li><li class="library-row" data-category="Приложения" data-slug="event-booking-console"><span class="library-index" aria-hidden="true">09</span><div><h3>Event Booking Console</h3><p>Интерфейс бронирования и локальный API.</p><span class="library-stack">TypeScript · React · Vite · Express · Google Sheets API</span><small>Локальный запуск проверен</small></div><span class="category">Приложения</span></li><li class="library-row" data-category="Приложения" data-slug="procurement-platform"><span class="library-index" aria-hidden="true">10</span><div><h3>Procurement Platform</h3><p>Закупки, согласования и уведомления.</p><span class="library-stack">TypeScript · React · Express · MySQL</span><small>Локальный запуск проверен</small></div><span class="category">Приложения</span></li><li class="library-row" data-category="Приложения" data-slug="finance-platform"><span class="library-index" aria-hidden="true">11</span><div><h3>Finance Platform</h3><p>Бюджеты, согласования и денежные движения.</p><span class="library-stack">TypeScript · React · Express · MySQL</span><small>Локальный запуск проверен</small></div><span class="category">Приложения</span></li><li class="library-row" data-category="Автоматизация" data-slug="followup-engine"><span class="library-index" aria-hidden="true">12</span><div><h3>Follow-up Engine</h3><p>Сценарии повторного контакта и оркестрация.</p><span class="library-stack">JavaScript · Node.js · Express · MySQL</span><small>Локальный запуск проверен</small></div><span class="category">Автоматизация</span></li><li class="library-row" data-category="ИИ / боты" data-slug="assistant-blueprints"><span class="library-index" aria-hidden="true">13</span><div><h3>Assistant Blueprints</h3><p>Конфигурации ассистентов, маршрутизация и локальные инструменты.</p><span class="library-stack">Python · SQLite · JSON</span><small>Локальный запуск проверен</small></div><span class="category">ИИ / боты</span></li><li class="library-row" data-category="ИИ / боты" data-slug="task-assistant"><span class="library-index" aria-hidden="true">14</span><div><h3>Task Assistant</h3><p>Telegram-ассистент с задачами и SQLite.</p><span class="library-stack">Python · aiogram · SQLite · OpenAI API</span><small>Локальный запуск проверен</small></div><span class="category">ИИ / боты</span></li><li class="library-row" data-category="Приложения" data-slug="tournament-manager"><span class="library-index" aria-hidden="true">15</span><div><h3>Tournament Manager</h3><p>Турнирные сетки и управление участниками.</p><span class="library-stack">Python · Flask · Jinja2 · python-telegram-bot</span><small>Локальный запуск проверен</small></div><span class="category">Приложения</span></li><li class="library-row" data-category="ИИ / боты" data-slug="device-control-bot"><span class="library-index" aria-hidden="true">16</span><div><h3>Device Control Bot</h3><p>Управление устройствами через бота с разграничением доступа.</p><span class="library-stack">Python · pyTelegramBotAPI · Paramiko / SSH · Wake-on-LAN</span><small>Локальный запуск проверен</small></div><span class="category">ИИ / боты</span></li><li class="library-row" data-category="ИИ / боты" data-slug="conversation-insights"><span class="library-index" aria-hidden="true">17</span><div><h3>Conversation Insights</h3><p>Анализ диалогов и тематическая обработка.</p><span class="library-stack">Python · stdlib HTTP · MySQL / SQLite · OpenAI API</span><small>Ограничение: старый полный набор тестов требует исправления</small></div><span class="category">ИИ / боты</span></li></ul>
+      <div class="empty-state" hidden><p>По этому запросу ничего не найдено.<br>Попробуйте другую формулировку или направление.</p><button type="button" id="clear-search">Сбросить поиск и фильтр</button></div>
+    </section>
+
+    <section class="closing" id="contact" aria-labelledby="contact-title">
+      <div><p class="eyebrow">Следующий проект</p><h2 id="contact-title">Обсудим задачу<br>и путь к решению.</h2></div>
+      <div class="closing-copy"><p>Ищу роли в Fullstack, AI Integration и Automation. Если вам нужен разработчик, который работает с интерфейсом, серверной логикой и интеграциями, — давайте познакомимся.</p><div class="closing-actions"><a class="primary" href="https://github.com/VortexFront">GitHub <span aria-hidden="true">↗</span></a><a class="secondary" href="assets/resume-maxim-asaturov.docx" download>Резюме · DOCX <span aria-hidden="true">↙</span></a></div><a class="contact-email" href="mailto:vanavany7@gmail.com">vanavany7@gmail.com <span aria-hidden="true">↗</span></a></div>
+      <p class="closing-roles">Fullstack / AI Integration / Business Automation <span>· Резюме: версия от 3 ноября 2026</span></p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© Максим Асатуров · 2026</span><span>Реальные приложения. Синтетические данные.</span><a href="#top">Наверх <span aria-hidden="true">↑</span></a></footer>
+  <dialog id="image-dialog" aria-labelledby="image-title">
+    <div class="dialog-top"><h2 id="image-title">Снимок локального приложения</h2><button type="button" id="close-image" aria-label="Закрыть увеличенный снимок">Закрыть <span aria-hidden="true">×</span></button></div>
+    <img id="full-image" alt="Увеличенный снимок приложения на синтетических данных">
+  </dialog>
+</body>
+</html>
