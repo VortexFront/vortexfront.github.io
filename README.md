@@ -16,8 +16,8 @@
 
 Обновлено 9 ноября 2026. В PDF и Word описаны самостоятельно разработанные проекты; обе версии содержат ссылку на портфолио.
 
-- [Скачать PDF](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-09.pdf)
-- [Скачать Word](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-09.docx)
+- [Скачать PDF](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-17.pdf)
+- [Скачать Word](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-17.docx)
 
 Текст хранится в `resume.md`. PDF и Word собираются из одного источника командой `python scripts/build_resume.py`; нужны `python-docx`, `reportlab` и шрифты Arial. Старый адрес Word сохранён как совместимый адрес актуального файла.
 

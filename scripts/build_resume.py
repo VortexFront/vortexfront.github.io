@@ -24,7 +24,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer
 
 ROOT = Path(__file__).resolve().parents[1]
-DATE = '2026-11-09'
+DATE = '2026-11-17'
 ASSETS = ROOT / 'assets'
 FONT_DIR = Path(os.environ.get('RESUME_FONT_DIR', r'C:\Windows\Fonts'))
 SOURCE = ROOT / 'resume.md'
