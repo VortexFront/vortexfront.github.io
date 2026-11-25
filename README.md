@@ -23,7 +23,7 @@
 
 ## Запуск и публикация
 
-HTML, CSS и обычный JavaScript, без npm, сборщика и внешних шрифтов. Для локального просмотра:
+HTML, CSS и обычный JavaScript, без npm и сборщика. Шрифты Golos Text и Playfair Display загружаются локально, лицензии SIL OFL сохранены в `assets/fonts/`. Для локального просмотра:
 
 ```sh
 python -m http.server 8000 --bind 127.0.0.1
