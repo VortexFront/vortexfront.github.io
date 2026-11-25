@@ -108,7 +108,9 @@ h1 { margin: .9rem 0 .45rem; font-size: clamp(2.55rem, 4.5vw, 4.55rem); line-hei
 .preview-frame img { width: 100%; height: auto; aspect-ratio: 1.69; object-fit: cover; object-position: top; }
 .preview-panel[data-transition] .preview-frame { animation: preview-enter .20s ease-out; }
 @keyframes preview-enter { from { opacity: .75; } to { opacity: 1; } }
-.preview-panel figcaption { display: flex; justify-content: space-between; align-items: center; gap: .15rem .65rem; flex-wrap: wrap; padding: .45rem .25rem .05rem; color: var(--muted); font-size: .8125rem; }
+.preview-panel figcaption { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .15rem .55rem; padding: .4rem .25rem .25rem; color: var(--muted); font-size: .8125rem; }
+.preview-panel figcaption p { grid-column: 1 / -1; min-block-size: 3lh; font-size: .9375rem; line-height: 1.45; }
+.preview-panel figcaption strong { color: var(--ink); }
 .preview-panel a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--accent-deep); font-size: .9375rem; font-weight: 700; }
 
 .results-list { grid-area: results; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; border-top: 1px solid #c6d1e7; }
@@ -295,6 +297,8 @@ dialog img { width: 100%; height: auto; }
   .hero-actions :is(.primary, .secondary) { font-size: .875rem; padding-inline: .625rem; }
   .contact-links { grid-template-columns: 1fr; }
   .site-nav a { font-size: .875rem; }
+  .preview-panel figcaption { grid-template-columns: 1fr; }
+  .preview-panel figcaption p { min-block-size: 4lh; }
   .preview-tabbar { gap: 0; }
   .preview-tabbar button { padding-inline: .42rem; font-size: .8125rem; }
 }
