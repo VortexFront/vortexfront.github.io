@@ -21,9 +21,10 @@ assert tree.xpath('//a[@href="mailto:volckovna@gmail.com"]')
 assert not any(word in source.lower() for word in ['vanavany7', 'участвовал', 'дорабатывал', 'не завершён', 'требует исправления'])
 for metric in ['15 048', '2 068', '14 038', '83', '90 000']:
     assert metric in text, metric
+contributions = {' '.join(node.text_content().split()) for node in by_class('my-contribution')}
 for project in data['projects']:
     assert project['name'] in text
-    assert ' '.join(project['presentation']['contribution'].split()) in text, project['name']
+    assert ' '.join(project['presentation']['contribution'].split()) in contributions, project['name']
 for project in data['library']:
     assert project['name'] in text
     assert ' '.join(project['description'].split()) in text, project['name']

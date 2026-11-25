@@ -24,7 +24,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer
 
 ROOT = Path(__file__).resolve().parents[1]
-DATE = '2026-11-17'
+DATE = '2026-11-25'
 ASSETS = ROOT / 'assets'
 FONT_DIR = Path(os.environ.get('RESUME_FONT_DIR', r'C:\Windows\Fonts'))
 SOURCE = ROOT / 'resume.md'
@@ -42,14 +42,12 @@ def blocks():
             result.append(('title', raw[2:], False))
         elif raw.startswith('## '):
             section = raw[3:]
-            result.append(('h1', section, False))
+            result.append(('h1', section, section == 'AI и автоматизация коммуникаций'))
         elif raw.startswith('### '):
-            title = raw[4:]
-            new_page = title.startswith(('Loyalty Platform', 'Dozhimator'))
-            result.append(('h2', title, new_page))
+            result.append(('h2', raw[4:], False))
         elif not section and raw.startswith('**'):
             result.append(('subtitle', raw.strip('*'), False))
-        elif not section:
+        elif not section and raw.startswith('Алматы, Казахстан'):
             lines = [line.strip() for line in raw.splitlines()]
             result.append(('contact', lines[0] + '  |  ' + lines[1], False))
             result.append(('contact', lines[2] + '  |  ' + lines[3], False))
