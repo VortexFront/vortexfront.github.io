@@ -8,7 +8,7 @@
 
 ## Проекты
 
-Пять подробных кейсов: Staff Suite, Campaign Control, Loyalty Platform, Events Platform и CRM–Sheets Sync. Для каждого описаны возможности сервиса, моя разработка, технические решения и результаты. Библиотека содержит ещё 17 работ с назначением и стеком.
+Пять подробных кейсов: Staff Suite, CRM–Sheets Sync, Loyalty Platform, Campaign Control и Events Platform. В отдельном разделе описаны проекты по AI и автоматизации клиентских коммуникаций. Для каждого описаны возможности сервиса, моя разработка, технические решения и результаты. Библиотека содержит ещё 17 работ с назначением и стеком.
 
 Публичные названия согласованы с каталогом проектов: Staff Suite — `nextstaff`, Campaign Control — `target-control-center`, Loyalty Platform — `friends-loyalty`, Events Platform — `next-afisha`, CRM–Sheets Sync — `bitrix-sheets-automation`.
 
@@ -23,7 +23,7 @@
 
 ## Запуск и публикация
 
-HTML, CSS и обычный JavaScript, без npm и сборщика. Шрифты Golos Text и Playfair Display загружаются локально, лицензии SIL OFL сохранены в `assets/fonts/`. Для локального просмотра:
+HTML, CSS и обычный JavaScript, без npm и сборщика. Шрифт Golos Text загружается локально, лицензии SIL OFL сохранены в `assets/fonts/`. Для локального просмотра:
 
 ```sh
 python -m http.server 8000 --bind 127.0.0.1

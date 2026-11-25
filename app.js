@@ -83,3 +83,54 @@ document.querySelector("#clear-search")?.addEventListener("click", () => {
 });
 const controls = document.querySelector(".library-controls");
 if (controls) controls.hidden = false;
+
+const previewTabs = document.querySelector(".preview-tabbar");
+
+if (previewTabs) {
+  const tabs = [...previewTabs.querySelectorAll('[role="tab"]')];
+  const panels = tabs.map(tab => document.getElementById(tab.getAttribute("aria-controls")));
+
+  if (tabs.length && panels.every(Boolean)) {
+    function selectPreview(index) {
+      tabs.forEach((tab, tabIndex) => {
+        const active = tabIndex === index;
+        const panel = panels[tabIndex];
+        const entering = active && panel.hidden;
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+        panel.toggleAttribute("data-transition", entering);
+        panel.hidden = !active;
+      });
+    }
+
+    tabs.forEach((tab, index) => {
+      const panel = panels[index];
+      panel.setAttribute("role", "tabpanel");
+      panel.setAttribute("aria-labelledby", tab.id);
+      panel.tabIndex = 0;
+      tab.addEventListener("click", () => selectPreview(index));
+      tab.addEventListener("keydown", event => {
+        let next;
+        switch (event.key) {
+          case "ArrowLeft": next = (index - 1 + tabs.length) % tabs.length; break;
+          case "ArrowRight": next = (index + 1) % tabs.length; break;
+          case "Home": next = 0; break;
+          case "End": next = tabs.length - 1; break;
+          default: return;
+        }
+        event.preventDefault();
+        selectPreview(next);
+        tabs[next].focus();
+      });
+    });
+    previewTabs.hidden = false;
+  }
+}
+
+function openLinkedDetails() {
+  const target = document.getElementById(location.hash.slice(1));
+  if (target instanceof HTMLDetailsElement && target.closest(".case")) target.open = true;
+}
+
+openLinkedDetails();
+window.addEventListener("hashchange", openLinkedDetails);
