@@ -6,44 +6,33 @@ const imageTitle = document.querySelector("#image-title");
 const closeImage = document.querySelector("#close-image");
 let imageTrigger;
 
-function showImage(path, button) {
-  if (!imageDialog || !fullImage) return;
-  imageTrigger = button;
-  fullImage.src = path;
-  fullImage.alt = button.dataset.caption || "Снимок локального приложения на синтетических данных";
-  imageTitle.textContent = button.dataset.caption || "Снимок локального приложения";
-  imageDialog.showModal();
-  closeImage.focus();
-}
+if (typeof imageDialog.showModal === "function") {
+  document.querySelectorAll("a[data-caption]").forEach(link => {
+    link.addEventListener("click", event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
 
-document.querySelectorAll("[data-gallery]").forEach(button => {
-  button.addEventListener("click", () => showImage(button.querySelector("img").getAttribute("src"), button));
-});
-document.querySelectorAll("[data-image]").forEach(button => {
-  button.addEventListener("click", () => showImage(button.dataset.image, button));
-});
-closeImage?.addEventListener("click", () => imageDialog.close());
-imageDialog?.addEventListener("keydown", event => {
-  if (event.key === "Tab") {
-    event.preventDefault();
-    closeImage.focus();
-  }
-});
-imageDialog?.addEventListener("click", event => {
-  const bounds = imageDialog.getBoundingClientRect();
-  if (event.target === imageDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) imageDialog.close();
-});
-imageDialog?.addEventListener("close", () => {
-  fullImage.removeAttribute("src");
-  imageTrigger?.focus({ preventScroll: true });
-});
-
-document.querySelectorAll(".case-link").forEach(link => {
-  link.addEventListener("click", () => {
-    const detail = document.querySelector(link.getAttribute("href"));
-    if (detail) detail.open = true;
+      event.preventDefault();
+      imageTrigger = link;
+      fullImage.src = link.href;
+      fullImage.alt = link.querySelector("img").alt;
+      imageTitle.textContent = link.dataset.caption;
+      imageDialog.showModal();
+      closeImage.focus();
+    });
   });
-});
+
+  closeImage.addEventListener("click", () => imageDialog.close());
+  imageDialog.addEventListener("click", event => {
+    const bounds = imageDialog.getBoundingClientRect();
+    const outside = event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom;
+    if (event.target === imageDialog && outside) imageDialog.close();
+  });
+  imageDialog.addEventListener("close", () => {
+    fullImage.removeAttribute("src");
+    imageTrigger.focus({ preventScroll: true });
+  });
+}
 
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const rows = [...document.querySelectorAll(".library-row")];
@@ -66,70 +55,36 @@ function filterLibrary() {
   emptyState.hidden = count !== 0;
 }
 
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter;
-    filterButtons.forEach(item => item.setAttribute("aria-pressed", String(item === button)));
-    filterLibrary();
+function setLibraryFilter(value) {
+  activeFilter = value;
+  filterButtons.forEach(button => {
+    button.setAttribute("aria-pressed", String(button.dataset.filter === value));
   });
-});
-search?.addEventListener("input", filterLibrary);
-document.querySelector("#clear-search")?.addEventListener("click", () => {
-  search.value = "";
-  activeFilter = "Все";
-  filterButtons.forEach(item => item.setAttribute("aria-pressed", String(item.dataset.filter === "Все")));
   filterLibrary();
+}
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => setLibraryFilter(button.dataset.filter));
+});
+search.addEventListener("input", filterLibrary);
+document.querySelector("#clear-search").addEventListener("click", () => {
+  search.value = "";
+  setLibraryFilter("Все");
   search.focus({ preventScroll: true });
 });
-const controls = document.querySelector(".library-controls");
-if (controls) controls.hidden = false;
-
-const previewTabs = document.querySelector(".preview-tabbar");
-
-if (previewTabs) {
-  const tabs = [...previewTabs.querySelectorAll('[role="tab"]')];
-  const panels = tabs.map(tab => document.getElementById(tab.getAttribute("aria-controls")));
-
-  if (tabs.length && panels.every(Boolean)) {
-    function selectPreview(index) {
-      tabs.forEach((tab, tabIndex) => {
-        const active = tabIndex === index;
-        const panel = panels[tabIndex];
-        const entering = active && panel.hidden;
-        tab.setAttribute("aria-selected", String(active));
-        tab.tabIndex = active ? 0 : -1;
-        panel.toggleAttribute("data-transition", entering);
-        panel.hidden = !active;
-      });
-    }
-
-    tabs.forEach((tab, index) => {
-      const panel = panels[index];
-      panel.setAttribute("role", "tabpanel");
-      panel.setAttribute("aria-labelledby", tab.id);
-      panel.tabIndex = 0;
-      tab.addEventListener("click", () => selectPreview(index));
-      tab.addEventListener("keydown", event => {
-        let next;
-        switch (event.key) {
-          case "ArrowLeft": next = (index - 1 + tabs.length) % tabs.length; break;
-          case "ArrowRight": next = (index + 1) % tabs.length; break;
-          case "Home": next = 0; break;
-          case "End": next = tabs.length - 1; break;
-          default: return;
-        }
-        event.preventDefault();
-        selectPreview(next);
-        tabs[next].focus();
-      });
-    });
-    previewTabs.hidden = false;
-  }
-}
+document.querySelector(".library-controls").hidden = false;
 
 function openLinkedDetails() {
   const target = document.getElementById(location.hash.slice(1));
-  if (target instanceof HTMLDetailsElement && target.closest(".case")) target.open = true;
+  if (!target) return;
+
+  const outer = target.closest(".more-cases");
+  const details = target.matches(".case > details, .approach") ? target : null;
+  const openOuter = outer && !outer.open;
+  const openDetails = details && !details.open;
+  if (openOuter) outer.open = true;
+  if (openDetails) details.open = true;
+  if (openOuter || openDetails) requestAnimationFrame(() => target.scrollIntoView());
 }
 
 openLinkedDetails();

@@ -8,16 +8,16 @@
 
 ## Проекты
 
-Пять подробных кейсов: Staff Suite, CRM–Sheets Sync, Loyalty Platform, Campaign Control и Events Platform. В отдельном разделе описаны проекты по AI и автоматизации клиентских коммуникаций. Для каждого описаны возможности сервиса, моя разработка, технические решения и результаты. Библиотека содержит ещё 17 работ с назначением и стеком.
+Пять подробных кейсов: CRM–Sheets Sync, Staff Suite, Loyalty Platform, Campaign Control и Events Platform. В отдельном разделе описаны проекты по AI и автоматизации клиентских коммуникаций. Для каждого описаны возможности сервиса, моя разработка, технические решения и результаты. Библиотека содержит ещё 17 работ с назначением и стеком.
 
 Публичные названия согласованы с каталогом проектов: Staff Suite — `nextstaff`, Campaign Control — `target-control-center`, Loyalty Platform — `friends-loyalty`, Events Platform — `next-afisha`, CRM–Sheets Sync — `bitrix-sheets-automation`.
 
 ## Актуальное резюме
 
-Обновлено 25 ноября 2026. В PDF и Word описаны самостоятельно разработанные проекты; обе версии содержат ссылку на портфолио.
+Обновлено 27 ноября 2026. В PDF и Word описаны самостоятельно разработанные проекты; обе версии содержат ссылку на портфолио.
 
-- [Скачать PDF](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-25.pdf)
-- [Скачать Word](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-25.docx)
+- [Скачать PDF](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-27.pdf)
+- [Скачать Word](https://vortexfront.github.io/assets/resume-maxim-asaturov-2026-11-27.docx)
 
 Текст хранится в `resume.md`. PDF и Word собираются из одного источника командой `python scripts/build_resume.py`; нужны `python-docx`, `reportlab` и шрифты Arial. Старый адрес Word сохранён как совместимый адрес актуального файла.
 
