@@ -3,6 +3,7 @@
 const imageDialog = document.querySelector("#image-dialog");
 const fullImage = document.querySelector("#full-image");
 const imageTitle = document.querySelector("#image-title");
+const imageOriginal = document.querySelector("#image-original");
 const closeImage = document.querySelector("#close-image");
 let imageTrigger;
 
@@ -14,6 +15,7 @@ if (typeof imageDialog.showModal === "function") {
       event.preventDefault();
       imageTrigger = link;
       fullImage.src = link.href;
+      imageOriginal.href = link.href;
       fullImage.alt = link.querySelector("img").alt;
       imageTitle.textContent = link.dataset.caption;
       imageDialog.showModal();
@@ -29,7 +31,9 @@ if (typeof imageDialog.showModal === "function") {
     if (event.target === imageDialog && outside) imageDialog.close();
   });
   imageDialog.addEventListener("close", () => {
+    if (imageDialog.open) return;
     fullImage.removeAttribute("src");
+    imageOriginal.removeAttribute("href");
     imageTrigger.focus({ preventScroll: true });
   });
 }

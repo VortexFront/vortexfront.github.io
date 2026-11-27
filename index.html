@@ -9,8 +9,8 @@
   <title>Максим Асатуров | Fullstack-разработчик</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=f146503fd6b5">
-  <script src="app.js?v=7e10fa46804c" defer></script>
+  <link rel="stylesheet" href="styles.css?v=3a2fe61fd0ee">
+  <script src="app.js?v=76759f74971f" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Перейти к содержимому</a>
@@ -49,7 +49,7 @@
         <h2 id="selected-title">Избранные проекты</h2>
         <a href="#library">Библиотека проектов</a>
       </div>
-      <article class="case" id="crm-sheets-sync" aria-labelledby="crm-sheets-sync-title">
+      <article class="case case--featured case--reporting" id="crm-sheets-sync" aria-labelledby="crm-sheets-sync-title">
         <div class="case-main">
           <div class="case-copy">
             <p class="case-context">Автоматизация отчётности</p>
@@ -59,11 +59,11 @@
             <p class="stack">Python · FastAPI · Bitrix24 API · Google Sheets API</p>
           </div>
           <figure class="case-media">
-            <a class="cover" href="assets/crm-sheets-sync-1.png" data-caption="CRM–Sheets Sync · демо-данные" aria-label="Увеличить снимок CRM–Sheets Sync">
-              <span class="screen-shell"><img src="assets/crm-sheets-sync-preview.webp" alt="Интерфейс приложения CRM–Sheets Sync" width="960" height="620" decoding="async"></span>
-              <span class="cover-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></span>
+            <a class="cover" href="assets/crm-sheets-sync-redesign.webp" data-caption="CRM–Sheets Sync · демо-данные" aria-label="Увеличить снимок CRM–Sheets Sync">
+              <span class="screen-shell"><img src="assets/crm-sheets-sync-redesign.webp" alt="Экран синхронизации Bitrix24 с Google Sheets" width="1440" height="1090" decoding="async"></span>
+              <span class="cover-action" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg><span>Увеличить снимок</span></span>
             </a>
-            <figcaption>Демо · проверка выгрузки и журнал запусков</figcaption>
+            <figcaption>Демо-данные · синхронизация и сверка отчётов</figcaption>
           </figure>
         </div>
         <details id="crm-sheets-sync-details">
@@ -76,12 +76,12 @@
             <div><h4>Что показывает демо</h4><ol><li>Запустить синхронизацию и сверку</li><li>Повторить без дублирования строк</li><li>Восстановить выполнение после сбоя</li></ol></div>
             <div><h4>Данные в демонстрации</h4><p class="limit">Локальная таблица не воспроизводит весь формульный движок Google Sheets. Реальные CRM и Google API в DEMO не вызываются.</p></div>
             <div class="architecture" aria-label="Архитектура: Локальный workbench → Python · mapping / retry → SQLite журнал · адаптер"><span>Локальный workbench</span><span>Python · mapping / retry</span><span>SQLite журнал · адаптер</span></div>
-            <div class="gallery" aria-label="Снимки CRM–Sheets Sync"><a class="thumb" href="assets/crm-sheets-sync-1.png" data-caption="CRM–Sheets Sync · снимок 1" aria-label="Увеличить снимок 1 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-1.png" alt="Синтетический сценарий 1 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/crm-sheets-sync-2.png" data-caption="CRM–Sheets Sync · снимок 2" aria-label="Увеличить снимок 2 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-2.png" alt="Синтетический сценарий 2 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/crm-sheets-sync-3.png" data-caption="CRM–Sheets Sync · снимок 3" aria-label="Увеличить снимок 3 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-3.png" alt="Синтетический сценарий 3 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></a></div>
+            <div class="case-gallery"><h4>Сценарии в предыдущей версии</h4><div class="gallery" aria-label="Предыдущая версия CRM–Sheets Sync"><a class="thumb" href="assets/crm-sheets-sync-1.png" data-caption="CRM–Sheets Sync · снимок 1" aria-label="Увеличить снимок 1 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-1.png" alt="Синтетический сценарий 1 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/crm-sheets-sync-2.png" data-caption="CRM–Sheets Sync · снимок 2" aria-label="Увеличить снимок 2 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-2.png" alt="Синтетический сценарий 2 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/crm-sheets-sync-3.png" data-caption="CRM–Sheets Sync · снимок 3" aria-label="Увеличить снимок 3 проекта CRM–Sheets Sync"><img src="assets/crm-sheets-sync-3.png" alt="Синтетический сценарий 3 — CRM–Sheets Sync" width="320" height="210" loading="lazy" decoding="async"></a></div></div>
           </div>
         </details>
       </article>
 
-      <article class="case" id="staff-suite" aria-labelledby="staff-suite-title">
+      <article class="case case--featured case--staff" id="staff-suite" aria-labelledby="staff-suite-title">
         <div class="case-main">
           <div class="case-copy">
             <p class="case-context">Внутренняя HR-система</p>
@@ -91,11 +91,11 @@
             <p class="stack">React · Node.js · Express · MySQL / SQLite</p>
           </div>
           <figure class="case-media">
-            <a class="cover" href="assets/staff-suite-1.png" data-caption="Staff Suite · демо-данные" aria-label="Увеличить снимок Staff Suite">
-              <span class="screen-shell"><img src="assets/staff-suite-preview.webp" alt="Интерфейс приложения Staff Suite" width="960" height="620" loading="lazy" decoding="async"></span>
-              <span class="cover-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></span>
+            <a class="cover" href="assets/staff-suite-redesign.webp" data-caption="Staff Suite · демо-данные" aria-label="Увеличить снимок Staff Suite">
+              <span class="screen-shell"><img src="assets/staff-suite-redesign.webp" alt="Сводка Staff Suite по сотрудникам и рабочему времени" width="1440" height="1000" loading="lazy" decoding="async"></span>
+              <span class="cover-action" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg><span>Увеличить снимок</span></span>
             </a>
-            <figcaption>Демо · сводка по рабочему времени и сотрудникам</figcaption>
+            <figcaption>Демо-данные · команда и рабочее время</figcaption>
           </figure>
         </div>
         <details id="staff-suite-details">
@@ -108,12 +108,12 @@
             <div><h4>Что показывает демо</h4><ol><li>Изменить карточку сотрудника</li><li>Убрать в архив и восстановить</li><li>Обновить страницу и проверить состояние</li></ol></div>
             <div><h4>Данные в демонстрации</h4><p class="limit">Синтетические сотрудники и локальная база. Общедоступная административная учётная запись не используется.</p></div>
             <div class="architecture" aria-label="Архитектура: React UI → Node.js API · роли → SQLite · аудит"><span>React UI</span><span>Node.js API · роли</span><span>SQLite · аудит</span></div>
-            <div class="gallery" aria-label="Снимки Staff Suite"><a class="thumb" href="assets/staff-suite-1.png" data-caption="Staff Suite · снимок 1" aria-label="Увеличить снимок 1 проекта Staff Suite"><img src="assets/staff-suite-1.png" alt="Синтетический сценарий 1 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/staff-suite-2.png" data-caption="Staff Suite · снимок 2" aria-label="Увеличить снимок 2 проекта Staff Suite"><img src="assets/staff-suite-2.png" alt="Синтетический сценарий 2 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/staff-suite-3.png" data-caption="Staff Suite · снимок 3" aria-label="Увеличить снимок 3 проекта Staff Suite"><img src="assets/staff-suite-3.png" alt="Синтетический сценарий 3 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/staff-suite-4.png" data-caption="Staff Suite · снимок 4" aria-label="Увеличить снимок 4 проекта Staff Suite"><img src="assets/staff-suite-4.png" alt="Синтетический сценарий 4 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a></div>
+            <div class="case-gallery"><h4>Сценарии в предыдущей версии</h4><div class="gallery" aria-label="Предыдущая версия Staff Suite"><a class="thumb" href="assets/staff-suite-1.png" data-caption="Staff Suite · снимок 1" aria-label="Увеличить снимок 1 проекта Staff Suite"><img src="assets/staff-suite-1.png" alt="Синтетический сценарий 1 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/staff-suite-2.png" data-caption="Staff Suite · снимок 2" aria-label="Увеличить снимок 2 проекта Staff Suite"><img src="assets/staff-suite-2.png" alt="Синтетический сценарий 2 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/staff-suite-3.png" data-caption="Staff Suite · снимок 3" aria-label="Увеличить снимок 3 проекта Staff Suite"><img src="assets/staff-suite-3.png" alt="Синтетический сценарий 3 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/staff-suite-4.png" data-caption="Staff Suite · снимок 4" aria-label="Увеличить снимок 4 проекта Staff Suite"><img src="assets/staff-suite-4.png" alt="Синтетический сценарий 4 — Staff Suite" width="320" height="210" loading="lazy" decoding="async"></a></div></div>
           </div>
         </details>
       </article>
 
-      <article class="case" id="loyalty-platform" aria-labelledby="loyalty-platform-title">
+      <article class="case case--featured case--loyalty" id="loyalty-platform" aria-labelledby="loyalty-platform-title">
         <div class="case-main">
           <div class="case-copy">
             <p class="case-context">Программа лояльности</p>
@@ -123,11 +123,11 @@
             <p class="stack">TypeScript · Fastify · PostgreSQL</p>
           </div>
           <figure class="case-media">
-            <a class="cover" href="assets/loyalty-platform-1.png" data-caption="Loyalty Platform · демо-данные" aria-label="Увеличить снимок Loyalty Platform">
-              <span class="screen-shell"><img src="assets/loyalty-platform-preview.webp" alt="Интерфейс приложения Loyalty Platform" width="960" height="620" loading="lazy" decoding="async"></span>
-              <span class="cover-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></span>
+            <a class="cover" href="assets/loyalty-platform-redesign.webp" data-caption="Loyalty Platform · демо-данные" aria-label="Увеличить снимок Loyalty Platform">
+              <span class="screen-shell"><img src="assets/loyalty-platform-redesign.webp" alt="Панель Loyalty Platform с клиентами, картами и состоянием импорта" width="1440" height="920" loading="lazy" decoding="async"></span>
+              <span class="cover-action" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg><span>Увеличить снимок</span></span>
             </a>
-            <figcaption>Демо · клиентская база, карты и импорт из Bubble</figcaption>
+            <figcaption>Демо-данные · клиенты, карты и импорт</figcaption>
           </figure>
         </div>
         <details id="loyalty-platform-details">
@@ -140,7 +140,7 @@
             <div><h4>Что показывает демо</h4><ol><li>Создать клиента и запросить карту</li><li>Одобрить выдачу в другой роли</li><li>Провести операцию и повторить без дубля</li></ol></div>
             <div><h4>Данные в демонстрации</h4><p class="limit">Настоящие OTP, платежи и внешние отправки отключены. OTP в DEMO принимает явно синтетический локальный почтовый ящик.</p></div>
             <div class="architecture" aria-label="Архитектура: Staff UI · сессия → Fastify · RBAC → PostgreSQL · outbox"><span>Staff UI · сессия</span><span>Fastify · RBAC</span><span>PostgreSQL · outbox</span></div>
-            <div class="gallery" aria-label="Снимки Loyalty Platform"><a class="thumb" href="assets/loyalty-platform-1.png" data-caption="Loyalty Platform · снимок 1" aria-label="Увеличить снимок 1 проекта Loyalty Platform"><img src="assets/loyalty-platform-1.png" alt="Синтетический сценарий 1 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-2.png" data-caption="Loyalty Platform · снимок 2" aria-label="Увеличить снимок 2 проекта Loyalty Platform"><img src="assets/loyalty-platform-2.png" alt="Синтетический сценарий 2 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-3.png" data-caption="Loyalty Platform · снимок 3" aria-label="Увеличить снимок 3 проекта Loyalty Platform"><img src="assets/loyalty-platform-3.png" alt="Синтетический сценарий 3 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-4.png" data-caption="Loyalty Platform · снимок 4" aria-label="Увеличить снимок 4 проекта Loyalty Platform"><img src="assets/loyalty-platform-4.png" alt="Синтетический сценарий 4 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-5.png" data-caption="Loyalty Platform · снимок 5" aria-label="Увеличить снимок 5 проекта Loyalty Platform"><img src="assets/loyalty-platform-5.png" alt="Синтетический сценарий 5 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a></div>
+            <div class="case-gallery"><h4>Сценарии в предыдущей версии</h4><div class="gallery" aria-label="Предыдущая версия Loyalty Platform"><a class="thumb" href="assets/loyalty-platform-1.png" data-caption="Loyalty Platform · снимок 1" aria-label="Увеличить снимок 1 проекта Loyalty Platform"><img src="assets/loyalty-platform-1.png" alt="Синтетический сценарий 1 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-2.png" data-caption="Loyalty Platform · снимок 2" aria-label="Увеличить снимок 2 проекта Loyalty Platform"><img src="assets/loyalty-platform-2.png" alt="Синтетический сценарий 2 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-3.png" data-caption="Loyalty Platform · снимок 3" aria-label="Увеличить снимок 3 проекта Loyalty Platform"><img src="assets/loyalty-platform-3.png" alt="Синтетический сценарий 3 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-4.png" data-caption="Loyalty Platform · снимок 4" aria-label="Увеличить снимок 4 проекта Loyalty Platform"><img src="assets/loyalty-platform-4.png" alt="Синтетический сценарий 4 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a><a class="thumb" href="assets/loyalty-platform-5.png" data-caption="Loyalty Platform · снимок 5" aria-label="Увеличить снимок 5 проекта Loyalty Platform"><img src="assets/loyalty-platform-5.png" alt="Синтетический сценарий 5 — Loyalty Platform" width="320" height="210" loading="lazy" decoding="async"></a></div></div>
           </div>
         </details>
       </article>
@@ -307,7 +307,13 @@
   </main>
   <footer class="site-footer"><span>© Максим Асатуров · 2026</span><a href="#top">Наверх</a></footer>
   <dialog id="image-dialog" aria-labelledby="image-title">
-    <div class="dialog-top"><h2 id="image-title">Снимок локального приложения</h2><button type="button" id="close-image" aria-label="Закрыть увеличенный снимок">Закрыть <span aria-hidden="true">×</span></button></div>
+    <div class="dialog-top">
+      <h2 id="image-title">Снимок локального приложения</h2>
+      <div class="dialog-actions">
+        <a id="image-original" target="_blank" rel="noopener" aria-label="Открыть оригинал в новой вкладке">Открыть оригинал</a>
+        <button type="button" id="close-image" aria-label="Закрыть увеличенный снимок">Закрыть <span aria-hidden="true">×</span></button>
+      </div>
+    </div>
     <img id="full-image" alt="Увеличенный снимок приложения на синтетических данных">
   </dialog>
 </body>
