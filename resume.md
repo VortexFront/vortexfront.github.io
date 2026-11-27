@@ -73,7 +73,7 @@ GitHub: https://github.com/VortexFront
 
 ## Открытые проекты
 
-Портфолио фотографа на React и TypeScript: галерея, пакеты услуг и форма заявки. Исходный код: https://github.com/VortexFront/wedding-photographer-portfolio
+Портфолио фотографа на React и TypeScript: галерея, пакеты услуг и демонстрационная форма заявки. Исходный код: https://github.com/VortexFront/wedding-photographer-portfolio
 
 ## Образование
 
